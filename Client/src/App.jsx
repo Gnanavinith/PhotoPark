@@ -18,6 +18,7 @@ import Acrylic from './Pages/ShopPages/Acrylic';
 import Canvas from './Pages/ShopPages/Canvas';
 import WoodenCutOuts from './Pages/ShopPages/WoodenCutOuts';
 import BacklightFrames from './Pages/ShopPages/BacklightFrames';
+import Order from './Pages/Order';
 
 
 
@@ -51,6 +52,10 @@ function App() {
             <Route path="/canvas" element={<Canvas/>} />
             <Route path="/woodenCutouts" element={<WoodenCutOuts/>} />
             <Route path="/backlight" element={<BacklightFrames/>} />
+
+            {/* {Order Route} */}
+            <Route path="/order" element={<Order/>} />
+
 
           </Routes>
         </BrowserRouter>

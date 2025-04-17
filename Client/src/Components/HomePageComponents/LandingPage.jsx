@@ -1,6 +1,7 @@
 import React from "react";
 import { motion} from "framer-motion";
 import parkvideo from "../../assets/frontend_assets/HomeSlides/photoparkk Video.mp4";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   
@@ -61,6 +62,7 @@ export default function LandingPage() {
             <span style={{ backgroundColor: "red", padding: "5px" }}>50%</span>{" "}
             OFFERS COLLECTIONS
           </div>
+          <Link to="/order">
           <button
             style={{
               marginTop: "10px",
@@ -74,7 +76,7 @@ export default function LandingPage() {
           >
             PURCHASE HERE
           </button>
-
+</Link>
         </div>
         
       </div>
