@@ -1,0 +1,44 @@
+@import '@fontsource/poppins';
+
+
+@import "tailwindcss";
+
+a.active hr{
+    display: block;
+}
+
+body{
+    background-color:#fffcf2;
+    
+}
+html, body {
+    overflow-x: hidden;
+  }
+  
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+  
+  .animate-flicker {
+    animation: flicker 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-light {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(255, 223, 0, 0); /* Transparent */
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 223, 0, 0.6); /* Gold yellow color */
+  }
+}
+
+.animate-pulse-light {
+  animation: pulse-light 2s ease-in-out infinite;
+}
+
+  
