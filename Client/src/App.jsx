@@ -4,7 +4,7 @@ import './App.css'
 import Home from './Pages/Home'
 import Shop from "./Pages/Shop";
 import Frames from "./Pages/Frames";
-import Customize from "./Pages/Customize";
+import Customize from "./Pages/CustomizePage";
 import About from "./Pages/About";
 import Contact from './Pages/Contact'
 import Collection from "./Pages/Shop";
@@ -12,7 +12,7 @@ import Product from './Pages/Product'
 import Cart from './Pages/Cart'
 import Login from './Pages/Login'
 import PlaceOrder from './Pages/PlaceOrder'
-import Orders from './Pages/Orders'
+
 import Navbar from './Components/Navbar'
 import Acrylic from './Pages/ShopPages/Acrylic';
 import Canvas from './Pages/ShopPages/Canvas';
@@ -26,7 +26,11 @@ import Order from './Pages/Order';
 
 
 function App() {
-
+  const dummyFrame = {
+    id: 1,
+    name: "Cool Acrylic Frame",
+    image: "/arrival1.jpg"
+  };
 
   return (
     <>
@@ -44,7 +48,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/frames" element={<Frames />} />            
             <Route path="/place-order" element={<PlaceOrder />} />
-            <Route path="/orders" element={<Orders />} />
+           
 
             {/* {ShopPage routes} */}
 
@@ -54,7 +58,7 @@ function App() {
             <Route path="/backlight" element={<BacklightFrames/>} />
 
             {/* {Order Route} */}
-            <Route path="/order" element={<Order/>} />
+            <Route path="/order" element={<Order frame={dummyFrame} />} />
 
 
           </Routes>

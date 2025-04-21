@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className=" min-h-screen relative bg-gradient-to-b from-white to-gray-50 py-20">
+    <section className=" min-h-screen relative bg-white py-20">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="space-y-4">
@@ -29,7 +29,7 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          <div className="mx-auto w-full max-w-[500px] aspect-square relative">
+          <div className=" mt-5 mx-auto w-full max-w-[500px] aspect-square relative">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-[80%] h-[80%] border-[20px] border-frame-black relative">
                 <img 

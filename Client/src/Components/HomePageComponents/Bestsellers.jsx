@@ -21,7 +21,7 @@ const Bestsellers = () => {
       const interval = setInterval(() => {
         setDirection(1);
         setCurrentImage((prev) => (prev + 1) % images.length);
-      }, 2000);
+      }, 1000);
       return () => clearInterval(interval);
     }
   }, [isHovered]);

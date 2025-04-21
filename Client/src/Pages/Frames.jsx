@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaRegImage, FaArrowRight } from "react-icons/fa";
 import Hero from "../Components/FrameComponents/Hero";
+import { FrameContext } from "../context/frameContext";
 
 const frameData = [
   {
@@ -34,12 +35,13 @@ const formatPrice = (price) => `₹${price}`;
 
 const Frames = () => {
   const [hoveredFrame, setHoveredFrame] = useState(null);
+  const {setFrame } = useContext(FrameContext); // ✅ Access context
 
   return (
     <div className="min-h-screen bg-white">
       <Hero />
 
-      <section className=" py-12 bg-white">
+      <section className="py-12 bg-white">
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
             {frameData.map((frame) => (
@@ -77,7 +79,7 @@ const Frames = () => {
                 <div className="px-6 pb-6">
                   <Link
                     to="/order"
-                    state={{ frame }} // Pass the selected frame data
+                    onClick={() => setFrame(frame)} // ✅ Set selected frame
                     className="block w-full"
                   >
                     <button className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-black text-white rounded-lg hover:bg-gray-800 transition">
@@ -90,10 +92,7 @@ const Frames = () => {
           </div>
 
           <div className="flex justify-center mt-10">
-            <Link
-              to="/order"
-              state={{ frame: frameData }} // Pass all frame data
-            >
+            <Link to="/order">
               <button className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-black transition">
                 View All Frames
               </button>
